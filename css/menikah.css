@@ -356,10 +356,10 @@ html {
 }
 
 .section .text-header{
-  font-style: italic;
+  /* font-style: italic; */
   /* font-weight: 400; */
   /* font-size: 10vmin; */
-  font-size: calc(20px + 3.390625vw);
+  font-size: calc(25px + 3.390625vw);
   line-height: normal !important;
   /* font-size: 3.5rem; */
   /* letter-spacing: 0.06em; */
@@ -594,7 +594,136 @@ color: #18371D;
   /* padding: 0px 100px; */
 }
 
-.event .event-content{
+/* .container-say-give{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+} */
+
+.content-say{
+  border-right: #F8F7E9 1px solid;
+  padding: 5% 3%;
+}
+
+.content-give{
+  display: flex;
+  flex-direction: column;
+  border-left: #F8F7E9 1px solid;
+  padding: 5% 3%;
+}
+
+
+@media (max-width: 769px) {
+
+  .content-say{
+    border-bottom: #F8F7E9 1px solid;
+    border-right: none;
+  }
+  
+  .content-give{
+    border-top: #F8F7E9 1px solid;
+    border-left: none;
+  }
+}
+
+.box-give{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  padding: 10% !important;
+  height: 100%;
+}
+
+.text-give{
+font-weight: 400;
+font-size: 2.5vh;
+/* line-height: 22px; */
+letter-spacing: 0.03em;
+
+color: #18371D;
+}
+
+.parent-protocol{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content-protocol{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.img-protocol{
+    text-align: center;
+  width: 100%;
+  height: 140px;
+}
+
+.text-protocol{
+  /* width: 60px; */
+  text-align: center;
+}
+
+/* Use :after pseudo element to simulate an invisible child div so the alignment of the items is fixed to left. And media queries for the responsive. Check the snippet to get some idea. */
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  /* background-color: lightgreen; */
+}
+
+.parent::after {
+  content: "";
+  width: 15%;
+  height: 0;
+}
+
+.child {
+  flex-basis: 15%;
+  /* background-color: blue; */
+  /* color: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width : 1024px) {
+  /* for tablet */
+  .parent::after {
+    width: 30%;
+  }
+  .child {
+    flex-basis: 30%;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  /* for mobile */
+  .parent::after {
+    display: none;
+  }
+  .child {
+    flex-basis: 100%;
+  }
+}
+
+/* .event .event-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -603,7 +732,7 @@ color: #18371D;
   line-height: normal;
 
   color: #4C2F30;
-}
+} */
 
 .event .event-content .event-day{
   font-size: 32px;
@@ -648,15 +777,12 @@ color: #18371D;
 }
 
 .btn-submit-say{
-  cursor: pointer;
-  padding: 0.7rem;
-  width: 50%;
-  color: #996E6D;
-  background-color: #EDD2D1;
+  color: #18371D;
+  background-color: #F8F7E9;
   border: none;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  padding: 0.5rem 2rem;
+  /* border: none; */
+  cursor: pointer;
 }
 
 .give img{
@@ -864,68 +990,27 @@ z-index: -1;
   padding: 80px 40px;
 }
 
-.main-content .section-dark-tree {
-  /* background-color: rgba(244, 226, 226, 0.6);
-  background-image: url(../image/bg-texture.jpg); */
-  background: url('../image/2-01.png'), rgba(244, 226, 226, 0.6);
+.main-content .section-texture-element {
+  background: url(../image/7-01.png) no-repeat, url(../image/bg-texture.jpg) no-repeat;
+  /* url(../image/7-01.png) no-repeat; */
+  /* background-position-y: -1px; */
+  background-size: contain, cover;    
+  background-position-y: calc(100% + 12.390625vw), -1px;
   padding: 80px 40px;
 }
 
-/* .main-content .section-give {
-  background: url(../image/2-01.png) no-repeat;
-  background-position-x: -3px, left;
-  border: none;
-  background-size: contain;
-} */
 
-.main-content .section-give {
-  position: relative;
-}
 
-.main-content .section-give:before {
-  content: ' ';
-  /* display: block; */
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-  background-image: url(../image/2-01.png);
-  background-repeat: no-repeat;
-  background-position-x: -3px, left;
-  background-size: contain;
-  /* background-size: 100% auto; */
-  /* background-attachment: fixed; */
-}
-
-@media (max-width: 518px) {
-  .main-content .section-give:before {
-    background-size: cover;
-  }
-}
-
-.main-content .section-dark {
-  background-color: rgba(244, 226, 226, 0.6);
-  padding: 80px 40px;
-  /* position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3; */
-}
-
-.main-content .section-darker {
-  background-color: #EDD2D1;
+.main-content .section-light {
+  background-color: #EEEEE7;
   padding: 80px 40px;
 }
 
-@media (max-width: 518px) {
+/* @media (max-width: 518px) {
   .main-content .section-img {
     background-attachment: initial;
   }
-}
+} */
 
 .main-content .section-dark.resume {
   height: 400px;
@@ -1131,9 +1216,11 @@ vertical-align: middle;
 }
 
 .footer {
-  background: linear-gradient(rgba(41, 41, 41, 0.1), rgba(0, 0, 0, 0.4)), url(../image/pecatu.jpg) no-repeat;
+  background: linear-gradient(rgba(41, 41, 41, 0.3), rgba(0, 0, 0, 0.3)), url(../image/pecatu.png) no-repeat;
   background-size: cover;
-  padding: 80px 40px;
+  background-position-y: 60%;
+  background-position-x: center;
+  /* padding: 80px 40px; */
   /* bottom: 0;
   width: 100vw;
   padding: 10px 10px 10px 10px;
@@ -1501,13 +1588,6 @@ body.preloader-site {
   text-align: left;
   color: white;
 }
-
-/* .section-light {
-  background-image: url(../image/divider-flowers-leaves.png);
-  background-position: bottom -30px center;
-  background-repeat: no-repeat;
-  background-size: initial;
-} */
 
 .instagram {
   color: #996E6D;
