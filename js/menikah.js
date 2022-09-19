@@ -164,16 +164,80 @@ window.onscroll = function() {
   scrollFunction();
 };
 
+// function onScrollHandle() {
+//   //Navbar shrink when scroll down
+//   $(".navbar-mobile").toggleClass("navbar-shrink", $(this).scrollTop() > 50);
+
+//   //Get current scroll position
+//   var currentScrollPos = $(document).scrollTop();
+
+//   //Iterate through all node
+//   $('.navbar-mobile > a').each(function () {
+//       var curLink = $(this);
+//       var refElem = $(curLink.attr('href'));
+//       //Compare the value of current position and the every section position in each scroll
+//       if (refElem.position().top <= currentScrollPos && refElem.position().top + refElem.height() > currentScrollPos) {
+//           //Remove class active in all nav
+//           $('.navbar-mobile > a').removeClass("active");
+//           //Add class active
+//           curLink.addClass("active");
+//       }
+//       else {
+//           curLink.removeClass("active");
+//       }
+//   });
+// }
+
 function scrollFunction() {
   if (window.scrollY > (window.outerHeight + (window.outerHeight/2))) {
     document.getElementById("toTop").style.display = "flex";
   } else {
     document.getElementById("toTop").style.display = "none";
   }
+  
+  //Iterate through all node
+  $('.navbar-mobile > a').each(function () {
+    var top = $(window).scrollTop();
+      var curLink = $(this);
+
+    const topel = $(curLink.attr('href')).offset().top;
+
+    // if (topel <= top && topel + $(curLink.attr('href')).height() > top) {
+    if (topel <= top) {
+      //Remove class active in all nav
+      $('.navbar-mobile > a').removeClass("active");
+      //Add class active
+      curLink.addClass("active");
+    }
+    else {
+      curLink.removeClass("active");
+    }
+    console.log(topel, top);
+
+
+      // if (refElem ) {
+      //     //Remove class active in all nav
+      //     $('.navbar-mobile > a').removeClass("active");
+      //     //Add class active
+      //     curLink.addClass("active");
+      // }
+      // if (refElem.position().top <= currentScrollPos && refElem.position().top + refElem.height() > currentScrollPos) {
+      //     //Remove class active in all nav
+      //     $('.navbar-mobile > a').removeClass("active");
+      //     //Add class active
+      //     curLink.addClass("active");
+      // }
+      // else {
+      //     curLink.removeClass("active");
+      // }
+  });
 }
 
 $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
+  // add class active
+  $('.navbar-mobile > a').removeClass("active");
+  $(this).addClass("active");
 
   $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top

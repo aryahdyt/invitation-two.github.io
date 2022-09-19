@@ -136,6 +136,49 @@ html {
   border-bottom: 2px solid #18371D;
 }
 
+.navbar-mobile{
+  overflow: hidden;
+  background-color: #F8F7E9;  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-evenly;
+      padding-left: 20px;
+      padding-right: 20px;
+}
+
+.navbar-mobile .navbar-list{
+  color: #18371D;
+  text-align: center;
+  /* letter-spacing: 1px; */
+  text-transform: capitalize;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.navbar-mobile .navbar-list i{
+  font-size: 20px;
+}
+.navbar-mobile .navbar-list p{
+  font-size: 10px;
+  text-align: center;
+}
+
+.navbar-mobile .navbar-list.active{
+  border-top: #18371D 2px solid;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* .navbar-mobile .navbar-list:hover{
+  color: #18371D;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+  background-color: 'transparent';
+} */
+
 /* .navbar-menu{
   background:  rgba(255, 255, 255, 0.8);
 } */
@@ -200,7 +243,7 @@ html {
 .hero .hero-title {
   font-weight: 200;
   font-size: 32px;
-  line-height: 32px;
+  /* line-height: 32px; */
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: #fff;
@@ -1330,7 +1373,7 @@ vertical-align: middle;
   /* padding: 10px; */
   display: flex;
   position: fixed;
-  bottom: 3rem;
+  bottom: 5rem;
   right: 1rem;
   z-index: 99;
   border: none;
@@ -1352,7 +1395,7 @@ vertical-align: middle;
   /* padding: 10px; */
   display: none;
   position: fixed;
-  bottom: 5.5rem;
+  bottom: 7.5rem;
   right: 1rem;
   z-index: 99;
   border: none;

@@ -90,7 +90,7 @@
   <!-- End Header -->
   <div class="main-content is-hidden">
     <!-- <div class="main-content"> -->
-    <div class="header-wrapper" id="home">
+    <section class="header-wrapper" id="home">
       <nav class="navbar-desktop is-hidden-mobile" role="navigation" aria-label="main navigation">
         <div class="is-12 hero-menu-desktop has-text-centered baskervile-normal">
           <ul>
@@ -101,13 +101,13 @@
               <a href="#event">EVENT</a>
             </li>
             <li>
-              <a href="#say">UCAPAN & DOA</a>
+              <a href="#say">Say</a>
             </li>
             <li>
-              <a href="#give">TANDA KASIH</a>
+              <a href="#give">Give</a>
             </li>
             <li>
-              <a href="#galery">TENTANG ARYA & NURUL</a>
+              <a href="#galery">Gallery</a>
             </li>
           </ul>
         </div>
@@ -115,45 +115,27 @@
       <!-- Begin Hero -->
       <section class="hero hero-page is-large">
         <!-- Begin Mobile Nav -->
-        <nav class="navbar is-transparent is-hidden-desktop">
-          <!-- Begin Burger Menu -->
-          <div class="navbar-brand is-fixed-top has-text-white-bis">
-            <div class="navbar-burger burger" data-target="mobile-nav">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <!-- End Burger Menu -->
-          <div id="mobile-nav" class="navbar-menu">
-            <div class="navbar-end baskervile-normal">
-              <div class="">
-                <a class="navbar-item" href="#home">
-                  Home
-                </a>
-              </div>
-              <div class="">
-                <a class="navbar-item" href="#event">
-                  Event
-                </a>
-              </div>
-              <div class="">
-                <a class="navbar-item" href="#say">
-                  UCAPAN & DOA
-                </a>
-              </div>
-              <div class="">
-                <a class="navbar-item" href="#give">
-                  TANDA KASIH
-                </a>
-              </div>
-              <div class="">
-                <a class="navbar-item" href="#galery">
-                  TENTANG ARYA & NURUL
-                </a>
-              </div>
-            </div>
-          </div>
+        <nav class="navbar-mobile is-transparent is-hidden-desktop">
+          <a class="navbar-list" href="#home" data-scroll="home">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <p>Home</p>
+          </a>
+          <a class="navbar-list" href="#event" data-scroll="event">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <p>Event</p>
+          </a>
+          <a class="navbar-list" href="#say" data-scroll="say">
+            <i class="fa fa-envelope"></i>
+            <p>Say</p>
+          </a>
+          <a class="navbar-list" href="#give" data-scroll="give">
+            <i class="fa fa-gift" aria-hidden="true"></i>
+            <p>Give</p>
+          </a>
+          <a class="navbar-list" href="#gallery" data-scroll="gallery">
+            <i class="fa fa-images" aria-hidden="true"></i>
+            <p>gallery</p>
+          </a>
         </nav>
         <!-- End Mobile Nav -->
         <!-- Begin Hero Content-->
@@ -212,9 +194,9 @@
         </div>
       </section>
       <!-- End Hero -->
-    </div>
+    </section>
     <!-- Begin regular-section-->
-    <section class="section section-double">
+    <section class="section section-double" id="our-story">
       <div class="columns is-desktop">
         <div class="ourstory-img column is-two-thirds-desktop" data-aos="fade-up" data-aos-easing="linear">
           <!-- <div class="hero-client mb-3rem"></div> -->
@@ -265,7 +247,7 @@
     </section>
     <!-- End regular-section-->
 
-    <section class="section section-img">
+    <section class="section section-img" id="event">
       <div class="has-text-centered has-vertically-aligned-content ayat">
         <div data-aos="fade-up" data-aos-easing="linear">
           <!-- <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim"> -->
@@ -397,7 +379,7 @@
     <section class="section section-img">
       <div data-aos="fade-up" data-aos-easing="linear">
         <div class="columns">
-          <div class="column is-half content-say">
+          <div class="column is-half content-say" id="say">
             <div class="edwardian-normal text-header has-text-centered has-text-white mb-1rem">
               Say and Pray
             </div>
@@ -445,7 +427,7 @@
               </div>
             </div>
           </div>
-          <div class="column is-half content-give">
+          <div class="column is-half content-give" id="give">
             <div class="edwardian-normal text-header has-text-centered has-text-white mb-1rem">
               Sign of Love
             </div>
@@ -476,32 +458,7 @@
       </div>
     </section>
 
-    <section class="section section-light">
-      <!-- <div class="columns is-gapless is-multiline is-desktop">
-        <div class="column content-protocol is-2">
-          <div class="baskervile-normal text-protocol">WEAR
-            MASK</div>
-        </div>
-        <div class="column content-protocol is-2">
-          <div class="baskervile-normal text-protocol">USE
-            HANDSANITIZER</div>
-        </div>
-        <div class="column content-protocol is-2">
-          <div class="baskervile-normal text-protocol">THERMAL
-            CHECK</div>
-        </div>
-        <div class="column content-protocol is-2">
-          <div class="baskervile-normal text-protocol">KEEP YOUR
-            DISTANCE</div>
-        </div>
-        <div class="column content-protocol is-2">
-          <div class="baskervile-normal text-protocol">SCAN
-            PEDULILINDUNGI</div>
-        </div>
-        <div class="column content-protocol is-2">
-          <div class="baskervile-normal text-protocol">VACCINATED</div>
-        </div>
-      </div> -->
+    <section class="section section-light" id="protocol">
       <div class="parent">
         <div class="child">
           <div class="img-protocol">
@@ -548,7 +505,7 @@
     </section>
 
 
-    <section class="section section-texture-element has-text-centered has-vertically-aligned-content">
+    <section id="gallery" class="section section-texture-element has-text-centered has-vertically-aligned-content">
       <div data-aos="fade-up" data-aos-easing="linear">
         <div class="container container-gallery mb-5rem">
           <!-- <div class="gallery-flower-left"></div>
