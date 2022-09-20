@@ -429,6 +429,14 @@ html {
   color: #F8F7E9;
 }
 
+.main-content .section-img-main {
+  background: linear-gradient(rgba(41, 41, 41, 0.2), rgba(0, 0, 0, 0.2)), rgba(0, 0, 0, 0.2) url(../image/pecatu.png) no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  padding: 5%;
+  color: #F8F7E9;
+}
+
 .ayat .desc-ayat{
   font-style: italic;
   font-weight: 400;
@@ -630,6 +638,34 @@ color: #18371D;
   bottom: -28vw;
   right: -12vw;
   rotate: 222deg;
+}
+
+.container-rsvp{
+  width: 100%;
+  height: auto;
+  background-color: #F8F7E9;
+  padding: 50px 10%;
+  border-radius: 10px;
+}
+
+.rsvp-header{
+  font-weight: 300;
+font-size: 88px;
+line-height: 77px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #18371D;
+}
+
+.btn-submit-rsvp{
+  background: #18371D;
+  color: #F8F7E9;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
 }
 
 .gallery-flower-left{
