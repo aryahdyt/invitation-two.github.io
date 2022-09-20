@@ -107,7 +107,7 @@ function getCountdown(){
   var year = now.getFullYear() + 1;
 
   var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-  var harih = '12/31/2022 17:00:00';
+  var harih = '3/18/2023 17:00:00';
 
   $('.hero-countdown').countdown({
     date: harih, // TODO Date format: 07/27/2017 17:00:00
