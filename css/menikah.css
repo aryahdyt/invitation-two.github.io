@@ -284,7 +284,7 @@ html {
   font-weight: 700;
   font-size: 24px;
   line-height: 0;
-  letter-spacing: 0.08em;
+  /* letter-spacing: 0.08em; */
   
   color: #FFFFFF;
   
@@ -916,12 +916,12 @@ color: #18371D;
 }
 
 .footer .footer-client{
+  text-align: center;
   font-weight: 400;
   line-height: 75px;
   margin: 3rem auto;
   font-size: 72px;
   width: 50%;
-  
   color: #FFFFFF;
 }
 
@@ -1076,7 +1076,7 @@ z-index: -1;
   background: url(../image/7-01.png) no-repeat, url(../image/bg-texture.jpg) no-repeat;
   /* url(../image/7-01.png) no-repeat; */
   /* background-position-y: -1px; */
-  background-size: contain, 100% 100%;
+  background-size: contain, cover;
   background-position-y: calc(100% + 12.390625vw), -2px;
   padding: 80px 40px;
 }
