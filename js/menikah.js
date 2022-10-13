@@ -259,12 +259,12 @@ $.fn.serializeObject = function()
 };
 
 // Preloader
-// $(document).ready(function($) {
-//   $(".preloader-wrapper").fadeOut();
-//   $("body").removeClass("preloader-site");
+$(document).ready(function($) {
+  $(".preloader-wrapper").fadeOut();
+  $("body").removeClass("preloader-site");
 
-// });
-// $(window).load(function() {
-//   var Body = $("body");
-//   Body.addClass("preloader-site");
-// });
+});
+$(window).load(function() {
+  var Body = $("body");
+  Body.addClass("preloader-site");
+});
